@@ -22,9 +22,10 @@
         
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300|Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 
+		<link rel="stylesheet" href="css/foundation.min.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/skeleton.css">
+<!--         <link rel="stylesheet" href="css/skeleton.css"> -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/hover-min.css">
         <link rel="stylesheet" href="css/animate.css">
@@ -46,17 +47,27 @@
         <![endif]-->
         <div id="page-preloader"><div id="spinner"></div></div><!--endPreloader-->
         
-        <div id="mobile-menu" class="visible-mobile mobile-nav hide-nav">
+        <div class="small reveal" id="exampleModal1" data-reveal data-close-on-click="true" data-animation-in="slide-in-down" data-animation-out="slide-out-down">
+			<div class="contMod">
+				<h1>01 ( 314 ) 332 00 14</h1>
+				<p>Contáctanos <a href="tel:013143320014">ahora <i class="fa fa-phone"></i></a></p>
+			</div>
+			<button class="close-button" data-close aria-label="Close modal" type="button">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+        
+        <div id="mobile-menu" class="hide-for-large mobile-nav hide-nav">
 			<div class="mobile-menu-close">
 				<button type="button" class="close" aria-hidden="true"><span>Cerrar</span>&times;</button>
 			</div>
 				   
-			<ul class="mobile-navigation">
+			<ul class="menu vertical mobile-navigation">
 				<li><a href="#nosotros">Somos y Seremos</a></li>
 				<li><a href="#servicios">Servicios</a></li>
 				<li><a href="#oficinas">Ofcinas</a></li>
 				<li><a href="#cotizador">Cotizador</a></li>
-				<li><a href="#blog">Blog</a></li>
+<!-- 				<li><a href="#blog">Blog</a></li> -->
 				<li><a href="#noticias">Noticias</a></li>
 				<li><a href="#intranet">Intranet</a></li>
 				<li><a href="#trabajo">Bolsa de Trabajo</a></li>
@@ -64,11 +75,15 @@
 		</div><!-- Mobile Menu -->
 	    
     	<header id="headMenu" role="heading">
-			<div class="container">
-				<div class="row visible-desk">
-					<div class="ten columns">
-						<nav class="menu">
-							<ul>
+			<div class="">
+				<div class="row">
+					<div class="large-3 medium-6 small-10 columns">
+						<a class="button cotizaBtnn" data-open="exampleModal1">Contáctanos</a>
+						<a class="button cotizaBtn" href="#cotizador">Cotiza ahora</a>
+					</div>
+					<div class="large-9 medium-6 small-2 columns">
+						<nav class="menuContent show-for-large">
+							<ul class="menu">
 								<li><a href="#nosotros">Somos y Seremos</a></li>
 								<li><a href="#servicios">Servicios</a></li>
 								<li><a href="#oficinas">Ofcinas</a></li>
@@ -78,20 +93,16 @@
 								<li><a href="#intranet">Intranet</a></li>
 								<li><a href="#trabajo">Bolsa de Trabajo</a></li>
 							</ul>
-						</nav>
-					</div>
-					<div class="two columns">
-						<a class="cotizaBtn" href="#cotizador">Contáctanos</a>
-						<a class="cotizaBtn" href="#cotizador">Cotiza ahora</a>
+						</nav><!-- end.navPrincipal -->
+						<a href="#mobile-menu" class="mobile-menu-trigger hide-for-large"><i class="fa fa-reorder"></i></a>
 					</div>
 				</div>
-				<a href="#mobile-menu" class="mobile-menu-trigger visible-mobile"><i class="fa fa-reorder"></i></a>
 			</div>
         </header><!--endHeader-->
         
         <main role="main">
 	        <section id="inicio">
-		        <picture data-enllax-ratio="-.1" data-enllax-type="foreground" data-enllax-direction="vertical">
+		        <picture class="show-for-small-only" data-enllax-ratio="-.1" data-enllax-type="foreground" data-enllax-direction="vertical">
 		        	<source srcset="img/inicio_pic/inicio_1.jpg" media="(min-width: 1281px)">
 					<source srcset="img/inicio_pic/inicio_2.jpg" media="(min-width: 1025px)">
 					<source srcset="img/inicio_pic/inicio_3.jpg" media="(min-width: 769px)">
@@ -99,19 +110,23 @@
 					<source srcset="img/inicio_pic/inicio_5.jpg">
 					<img src="img/inicio_pic/inicio_1.jpg" alt="Hanopan">
 		        </picture>
+		        <video id="vide-hpa" class="hide-for-small-only" height="100%" preload="auto" autoplay muted loop>
+			        <source src="img/hpa.mp4" type="video/mp4">
+					Your browser does not support HTML5 video.
+		        </video>
 		        <div class="overPic"></div>
 				<div class="contSlideBig">
-					<div class="container">
+					<div class="">
 						<div class="row">
-							<div class="offset-by-four four columns">
-								<div data-wow-delay="1.0s" class="logoCont wow bounceIn">
+							<div class="large-4 large-offset-4 medium-6 medium-offset-3 small-10 small-offset-1 columns">
+								<div data-wow-delay="3.0s" class="logoCont wow zoomIn">
 									<img src="img/logo_slider.png" alt="Hano Paniaguaan Oficial">
 								</div>
 								<div class="logopat">
 									<ul>
-										<li data-wow-delay="1.2s" class="wow fadeInUp"><img src="img/logo_nose.png" alt=""></li>
-										<li data-wow-delay="1.4s" class="wow fadeInUp"><img src="img/logo_iso.png" alt=""></li>
-										<li data-wow-delay="1.6s" class="wow fadeInUp"><img src="img/logo_35.png" alt=""></li>
+										<li data-wow-delay="2.2s" class="wow flipInX"><img src="img/logo_nose.png" alt=""></li>
+										<li data-wow-delay="2.4s" class="wow flipInX"><img src="img/logo_iso.png" alt=""></li>
+										<li data-wow-delay="2.6s" class="wow flipInX"><img src="img/36.png" alt=""></li>
 									</ul>
 								</div>
 							</div>
@@ -121,10 +136,10 @@
 	        </section>
         	
         	<section id="nosotros">
-	        	<div class="container about">
+	        	<div class="about">
 	        		<div class="row">
-		        		<div data-wow-delay="1.0s" class="six columns wow rotateInUpRight">
-			        		<h3>Somos y Seremos.</h3>
+		        		<div data-wow-delay="1.0s" class="large-6 medium-6 columns wow rotateInUpRight">
+			        		<h3>Somos y Seremos</h3>
 			        		<p>
 				        		Alcanzar los mejores resultados, no es labor de un día
 				        		<br><br>
@@ -137,7 +152,7 @@
 				        		Nuestro Grupo lo integran la Agencia Aduanal Hano Paniagua y Asociados, HPA Logistics, Operadora de la Cuenca del Pacifico, Almacenajes & Maniobras y Frigorífico de Manzanillo.
 			        		</p>
 		        		</div>
-		        		<div data-wow-delay="1.4s" class="six columns wow rotateInUpLeft">
+		        		<div data-wow-delay="1.4s" class="large-6 medium-6 columns wow rotateInUpLeft">
 			        		<ul class="bxslider">
 				        		<li><img src="img/slider/1.jpg" alt=""></li>
 				        		<li><img src="img/slider/2.jpg" alt=""></li>
@@ -145,10 +160,14 @@
 				        		<li><img src="img/slider/4.jpg" alt=""></li>
 				        		<li><img src="img/slider/5.jpg" alt=""></li>
 				        		<li><img src="img/slider/6.jpg" alt=""></li>
-				        		<li><img src="img/slider/7.jpg" alt=""></li>
-				        		<li><img src="img/slider/8.jpg" alt=""></li>
+<!-- 				        		<li><img src="img/slider/7.jpg" alt=""></li> -->
+<!-- 				        		<li><img src="img/slider/8.jpg" alt=""></li> -->
 				        		<li><img src="img/slider/9.jpg" alt=""></li>
 				        		<li><img src="img/slider/10.jpg" alt=""></li>
+				        		<li><img src="img/slider/11.jpg" alt=""></li>
+				        		<li><img src="img/slider/12.jpg" alt=""></li>
+				        		<li><img src="img/slider/13.jpg" alt=""></li>
+				        		<li><img src="img/slider/14.jpg" alt=""></li>
 			        		</ul>
 		        		</div>
 	        		</div>
@@ -158,18 +177,18 @@
         	<section id="servicios">
 	        	<div class="bgServ" data-enllax-ratio=".1" data-enllax-direction="horizontal"></div>
 		        <div class="overPic"></div>
-	        	<div class="container services">
+	        	<div class="services">
 		        	<div data-wow-delay="0.2s" class="row titleServ wow fadeInLeft">
-		        		<div class="u-full-width column">
-			        		<h3>Servicios</h3>
+		        		<div class="large-12 column">
+			        		<h2>Servicios</h2>
 			        		<p>No te compliques, todo en un mismo lugar.</p>
 		        		</div>
 		        	</div>
 	        	</div><!--title-->
 	        	<div class="clear h30"></div>
-	        	<div class="container services">
+	        	<div class="services">
 	        		<div class="row">
-	        			<div data-wow-delay="0.2s" class="four columns wow fadeInUp">
+	        			<div data-wow-delay="0.2s" class="large-4 medium-6 columns wow fadeInUp">
 		        			<div class="boxServ">
 			        			<img src="img/flete.png">
 			        			<div class="captionn">
@@ -180,7 +199,7 @@
 		        			<div class="clear h10"></div>
 		        			<h5>Flete Terrestre y Marítimo</h5>
 	        			</div><!--endBox-->
-	        			<div data-wow-delay="0.4s" class="four columns wow fadeInUp">
+	        			<div data-wow-delay="0.4s" class="large-4 medium-6 columns wow fadeInUp">
 		        			<div class="boxServ">
 			        			<img src="img/despachos.png">
 			        			<div class="captionn">
@@ -191,7 +210,7 @@
 		        			<div class="clear h10"></div>
 		        			<h5>Despacho Aduanal</h5>
 	        			</div><!--endBox-->
-	        			<div data-wow-delay="0.6s" class="four columns wow fadeInUp">
+	        			<div data-wow-delay="0.6s" class="large-4 medium-6 columns wow fadeInUp">
 		        			<div class="boxServ">
 			        			<img src="img/seguro.png">
 			        			<div class="captionn">
@@ -202,8 +221,8 @@
 		        			<div class="clear h10"></div>
 		        			<h5>Seguros de Carga</h5>
 	        			</div><!--endBox-->
-	        			<div class="clear h20"></div>
-	        			<div data-wow-delay="0.8s" class="offset-by-two four columns wow fadeInUp">
+	        			<div class="clearfix show-for-large"></div>
+	        			<div data-wow-delay="0.8s" class="large-4 large-offset-2 medium-6 columns wow fadeInUp">
 		        			<div class="boxServ">
 			        			<img src="img/bodegas.png">
 			        			<div class="captionn">
@@ -214,7 +233,7 @@
 		        			<div class="clear h10"></div>
 		        			<h5>Bodegas y Almacenes</h5>
 	        			</div><!--endBox-->
-	        			<div data-wow-delay="0.8s" class="four columns wow fadeInUp">
+	        			<div data-wow-delay="0.8s" class="large-4 large-offset-0 medium-6 medium-offset-3 columns end wow fadeInUp">
 		        			<div class="boxServ">
 			        			<img src="img/logistica.png">
 			        			<div class="captionn">
@@ -231,22 +250,22 @@
         	
         	<section id="cotizador">
 	        	<div class="formCotiza">
-		        	<div class="container">
+		        	<div class="">
 			        	<form name="cotiza" id="cotiza" method="post" action="">
 				        	<div class="row">
-					        	<div class="u-full-width">
+					        	<div class="large-12 columns">
 						        	<h2>Cotiza ahora</h2>
 						        	<p>No esperes más, te cotizamos al instante.</p>
 					        	</div>
 				        	</div>
 				        	<div class="clear h30"></div>
 				        	<div class="row">
-					        	<div data-wow-delay="0.8s" class="four columns wow fadeIn">
+					        	<div data-wow-delay="0.8s" class="large-4 medium-6 columns wow fadeIn">
 						        	<div data-wow-delay="0.2s" class="titleCotiza wow fadeIn">
 							        	<h6>Datos Importador/Exportador</h6>
 						        	</div>
 						        	<label for="nombre">Nombre / Razón social</label>
-									<input class="u-full-width" id="nombre" name="nombre" type="text">
+									<input id="nombre" name="nombre" type="text">
 									<label>¿Está inscrito en el padron de importadores?</label>
 									<div class="clear"></div>
 									<label class="select-form">
@@ -259,28 +278,28 @@
 									</label>
 									<div class="clear"></div>
 									<label for="nombrecont">Nombre del contacto</label>
-									<input class="u-full-width" id="nombrecont" name="nombrecont" type="text">
+									<input id="nombrecont" name="nombrecont" type="text">
 									<label for="telefono">Teléfono de contacto (c/LADA)</label>
-									<input class="u-full-width" id="telefono" name="telefono" type="text">
+									<input id="telefono" name="telefono" type="text">
 									<label for="movil">Teléfono móvil</label>
-									<input class="u-full-width" id="movil" name="movil" type="text">
+									<input id="movil" name="movil" type="text">
 									<label for="email">Email</label>
-									<input class="u-full-width" placeholder="mail@mail.com" id="email" name="email" type="email">
+									<input placeholder="mail@mail.com" id="email" name="email" type="email">
 					        	</div>
 					        	
-					        	<div data-wow-delay="0.4s" class="four columns wow fadeIn">
+					        	<div data-wow-delay="0.4s" class="large-4 medium-6 columns wow fadeIn">
 						        	<div class="titleCotiza">
 							        	<h6>Datos de la Mercancia</h6>
 						        	</div>
 						        	<label for="producto">Producto(s)</label>
-									<input class="u-full-width" id="producto" name="producto" type="text">
+									<input id="producto" name="producto" type="text">
 									<label>Valor de la mercancia (especificar mn o usd)</label>
 									<div class="row">
 										<div class="eight columns">
 											<input type="text" class="u-full-width" id="valor" placeholder="$" name="valor">
 										</div>
 										<div class="four columns">
-											<select class="u-full-width" id="valores" name="valores">
+											<select id="valores" name="valores">
 												<option value="">Moneda</option>
 												<option value="MN">MN</option>
 												<option value="UDS">UDS</option>
@@ -327,16 +346,16 @@
 									<div class="clear"></div>
 					        	</div>
 					        	
-					        	<div data-wow-delay="0.6s" class="four columns wow fadeIn">
+					        	<div data-wow-delay="0.6s" class="large-4 large-offset-0 medium-6 medium-offset-3 columns end wow fadeIn">
 						        	<div class="titleCotiza">
 							        	<h6>Datos del Embarque</h6>
 						        	</div>
 						        	<label for="puerto">Puerto de origen</label>
-									<input class="u-full-width" id="puerto" name="puerto" type="text">
+									<input id="puerto" name="puerto" type="text">
 									<label for="destino">Destino final</label>
-									<input class="u-full-width" id="destino" name="destino" type="text">
+									<input id="destino" name="destino" type="text">
 									<label for="postal">Código Postal</label>
-									<input class="u-full-width" id="postal" name="postal" type="text">
+									<input id="postal" name="postal" type="text">
 									<label>Servicios a cotizar</label>
 									<div class="clear"></div>
 									<label class="select-form">
@@ -365,13 +384,14 @@
 									</label>
 									<div class="clear"></div>
 									<label for="mensaje">Breve descripción</label>
-									<textarea class="u-full-width" placeholder="Comentarios" id="mensaje" name="mensaje"></textarea>
+									<textarea placeholder="Comentarios" id="mensaje" name="mensaje"></textarea>
 					        	</div>
 				        	</div>
+				        	<div class="clearfix h20"></div>
 				        	<div class="row">
 					        	<div class="resConctact"></div>
-					        	<div class="offset-by-eight four columns">
-						        	<button type="submit">Enviar</button>
+					        	<div class="large-4 large-offset-4 medium-4 medium-offset-4 columns end text-center">
+						        	<button type="submit" class="button">Enviar</button>
 					        	</div>
 				        	</div>
 			        	</form>
@@ -383,15 +403,15 @@
 	        	<div class="bgOfi" data-enllax-ratio=".5"></div>
 	        	<div class="overPic"></div>
 	        	<div class="contOficinas">
-		        	<div class="container">
+		        	<div class="">
 			        	<div class="row">
-				        	<div data-wow-delay="0.6s" class="u-full-width wow fadeIn">
+				        	<div data-wow-delay="0.6s" class="large-12 columns wow fadeIn">
 					        	<h3>Directorio de Oficinas</h3>
 				        	</div>
 			        	</div>
 			        	<div class="clear h30"></div>
 		        		<div class="row">
-			        		<div data-wow-delay="0.2s" class="six columns wow bounceIn">
+			        		<div data-wow-delay="0.2s" class="large-4 medium-4 columns wow bounceIn">
 				        		<div class="contLisofi">
 						        	<h6><a class="btn_info" target="1">Corporativo Puerto Manzanillo</a></h6><!--Btn map 1-->
 				        		</div>
@@ -401,7 +421,7 @@
 				        			<a href="mailto:info@hpa.com.mx" target="_blank">info@hpa.com.mx</a>
 				        		</div>
 			        		</div>
-			        		<div data-wow-delay="0.4s" class="three columns  wow bounceIn">
+			        		<div data-wow-delay="0.4s" class="large-4 medium-4 columns wow bounceIn">
 				        		<div class="contLisofi">
 						        	<h6><a class="btn_info" target="2">Ciudad de México</a></h6><!--Btn map 2-->
 				        		</div>
@@ -411,7 +431,7 @@
 				        			<a href="mailto:info@hpa.com.mx" target="_blank">info@hpa.com.mx</a>
 				        		</div>
 			        		</div>
-			        		<div data-wow-delay="0.6s" class="three columns  wow bounceIn">
+			        		<div data-wow-delay="0.6s" class="large-4 medium-4 columns wow bounceIn">
 				        		<div class="contLisofi">
 						        	<h6><a class="btn_info" target="3">Aguascalienntes</a></h6><!--Btn map 3-->
 				        		</div>
@@ -421,8 +441,10 @@
 				        			<a href="mailto:info@hpa.com.mx" target="_blank">info@hpa.com.mx</a>
 				        		</div>
 			        		</div>
-			        		<div class="clear h20"></div>
-			        		<div data-wow-delay="0.2s" class="four columns no-margin wow bounceIn">
+			        		
+			        		<div class="clearfix"></div>
+			        		
+			        		<div data-wow-delay="0.2s" class="large-4 medium-4 columns wow bounceIn">
 				        		<div class="contLisofi">
 						        	<h6><a class="btn_info" target="4">Nuevo Laredo</a></h6><!--Btn map 4-->
 				        		</div>
@@ -432,7 +454,7 @@
 				        			<a href="mailto:info@hpa.com.mx" target="_blank">info@hpa.com.mx</a>
 				        		</div>
 			        		</div>
-			        		<div data-wow-delay="0.4s" class="four columns wow bounceIn">
+			        		<div data-wow-delay="0.4s" class="large-4 medium-4 columns wow bounceIn">
 				        		<div class="contLisofi">
 						        	<h6><a class="btn_info" target="5">Laredo Texas</a></h6><!--Btn map 5-->
 				        		</div>
@@ -442,7 +464,7 @@
 				        			<a href="mailto:info@hpa.com.mx" target="_blank">info@hpa.com.mx</a>
 				        		</div>
 			        		</div>
-			        		<div data-wow-delay="0.6s" class="four columns wow bounceIn">
+			        		<div data-wow-delay="0.6s" class="large-4 medium-4 columns wow bounceIn">
 				        		<div class="contLisofi">
 						        	<h6><a class="btn_info" target="6">Puerto de Lázaro Cárdenas</a></h6><!--Btn map 6-->
 				        		</div>
@@ -452,8 +474,10 @@
 				        			<a href="mailto:info@hpa.com.mx" target="_blank">info@hpa.com.mx</a>
 				        		</div>
 			        		</div>
-			        		<div class="clear h20"></div>
-			        		<div data-wow-delay="0.2s" class="offset-by-two four columns wow bounceIn">
+			        		
+			        		<div class="clearfix"></div>
+			        		
+			        		<div data-wow-delay="0.2s" class="large-4 large-offset-2 medium-4 medium-offset-2 columns wow bounceIn">
 				        		<div class="contLisofi">
 						        	<h6><a class="btn_info" target="7">San Luis Potosí</a></h6><!--Btn map 7-->
 				        		</div>
@@ -463,7 +487,7 @@
 				        			<a href="mailto:info@hpa.com.mx" target="_blank">info@hpa.com.mx</a>
 				        		</div>
 			        		</div>
-			        		<div data-wow-delay="0.4s" class="four columns wow bounceIn">
+			        		<div data-wow-delay="0.4s" class="large-4 medium-4 columns end wow bounceIn">
 				        		<div class="contLisofi">
 						        	<h6><a class="btn_info" target="8">Veracruz</a></h6><!--Btn map 8-->
 				        		</div>
@@ -479,9 +503,9 @@
         	</section>
         	
         	<section id="blog">
-	        	<div class="container">
+	        	<div class="">
 	        		<div class="row">
-	        			<div class="u-full-width column">
+	        			<div class="large-12 columns">
 <!-- 		        			<h3 data-wow-delay="1.0s" class="wow fadeInDown">Blog</h3> -->
 <!-- 		        			<p data-wow-delay="1.6s" class="wow bounceIn">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus sem viverra elit sollicitudin, eu malesuada lacus fringilla. Proin nec massa ac nulla venenatis consequat. Ut nec ligula tincidunt, molestie lacus vel, placerat massa. Sed sagittis orci ipsum. Curabitur consequat ultrices urna, ullamcorper efficitur velit pretium in. Curabitur laoreet urna ac nibh sodales, dapibus interdum ligula placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie elit ac mi placerat eleifend. Mauris faucibus arcu nec lacus pharetra posuere.</p> -->
 							<div class="logoContBlog">
@@ -490,7 +514,7 @@
 	        			</div>
 	        		</div>
 	        		<div class="row">
-	        			<div class="offset-by-four four columns">
+	        			<div class="large-4 large-offset-4 columns">
 		        			<div data-wow-delay="1.0s" class="consultlaEm wow bounceIn">
 			        			<a href=""></a>
 			        			<p>Si aun no cuentas con tus datos de acceso, manda un mail a info@hpa.com.mx</p>
@@ -513,16 +537,16 @@
 -->
 				<div class="bgNoti" data-enllax-ratio="-.1" data-enllax-direction="horizontal"></div>
 		        <div class="overPic"></div>
-	        	<div class="container notices">
+	        	<div class=" notices">
 	        		<div class="row">
-	        			<div class="u-full-width column">
+	        			<div class="large-12 columns">
 		        			<h3 data-wow-delay="1.6s" class="wow bounceIn">Noticias</h3>
 		        			<div class="clear h30"></div>
 		        			<div id="test" data-wow-delay="1.6s" class="wow bounceInLeft"></div>
 	        			</div>
 	        		</div>
 	        		<div class="row">
-	        			<div class="offset-by-four four columns">
+	        			<div class="large-4 large-offset-4 columns">
 		        			<div class="consultlaEm">
 			        			<a href=""></a>
 			        			<p>Si aun no cuentas con tus datos de acceso, manda un mail a info@hpa.com.mx</p>
@@ -533,47 +557,47 @@
         	</section>
         	
         	<section id="trabajo">
-	        	<div class="container">
+	        	<div class="">
 	        		<div class="row">
-	        			<div class="u-full-width column">
+	        			<div class="large-12 column">
 		        			<h3>Bolsa de trabajo</h3>
 	        			</div>
 	        		</div>
 	        		<div class="clear h20"></div>
-	        		<div class="row">
+		        	<form method="post" id="BolsaForm" name="BolsaForm" enctype="multipart/form-data" action="">
 		        		<div class="trabajoForm">
-			        		<form method="post" id="BolsaForm" name="BolsaForm" enctype="multipart/form-data" action="">
-				        		<div data-wow-delay="0.8s" class="six columns wow fadeInLeft">
+			        		<div class="row">
+				        		<div data-wow-delay="0.8s" class="large-6 medium-6 columns wow fadeInLeft">
 					        		<label for="nombre">Nombre Completo*</label>
-					        		<input type="text" class="u-full-width" name="nombre" id="nombre" placeholder="Nombre completo.">
+					        		<input type="text" name="nombre" id="nombre" placeholder="Nombre completo.">
 				        		</div><!-- end.Nombre -->
-				        		<div data-wow-delay="0.8s" class="six columns wow fadeInRight">
+				        		<div data-wow-delay="0.8s" class="large-6 medium-6 columns wow fadeInRight">
 					        		<label for="telefono">Teléfono / Celular*</label>
-					        		<input type="text" class="u-full-width" name="telefono" id="telefono" placeholder="Agrega un teléfono.">
+					        		<input type="text" name="telefono" id="telefono" placeholder="Agrega un teléfono.">
 				        		</div><!-- end.Telefono -->
 				        		
 				        		<div class="clear h10">
 					        	
-					        	<div data-wow-delay="1.2s" class="six columns wow fadeInLeft">
+					        	<div data-wow-delay="1.2s" class="large-6 medium-6 columns wow fadeInLeft">
 					        		<label for="email">Email*</label>
-					        		<input type="email" class="u-full-width" name="email" id="email" placeholder="Ingresa tu email.">
+					        		<input type="email" name="email" id="email" placeholder="Ingresa tu email.">
 				        		</div><!-- end.Email -->
-				        		<div data-wow-delay="1.2s"  class="six columns wow fadeInRight">
+				        		<div data-wow-delay="1.2s"  class="large-6 medium-6 columns wow fadeInRight">
 					        		<label for="fileUpload">Carga tu CV*</label>
-					        		<input class="u-full-width" id="fileUpload" name="fileUpload" type="file">
+					        		<input cid="fileUpload" name="fileUpload" type="file">
 				        		</div><!-- end.Cargafile -->	
 				        		
-				        		<div data-wow-delay="1.6s"  class="offset-by-four four columns wow bounceIn">
+				        		<div data-wow-delay="1.6s"  class="large-4 large-offset-4 columns end text-center wow bounceIn">
 					        		<div class="resConctact"></div>
 					        		<div class="clear"></div>
 					        		<button class="button button-primary" type="submit" name="submit" id="submit">Enviar propuesta</button>
 				        		</div><!-- end.BtnEnvíar -->
-			        		</form><!-- end.FormCV -->
+			        		</div>
 		        		</div>
-	        		</div>
+	        		</form><!-- end.FormCV -->
 	        		<div class="clear h20"></div>
 	        		<div class="row">
-	        			<div class="offset-by-four four columns">
+	        			<div class="large-4 large-offset-4 columns">
 		        			<div class="consultlaEm">
 			        			<a href=""></a>
 			        			<p>Si aun no cuentas con tus datos de acceso, manda un mail a info@hpa.com.mx</p>
@@ -586,20 +610,18 @@
         	<section id="intranet">
 				<div class="bgIntra" data-enllax-ratio=".1" data-enllax-direction="horizontal"></div>
 		        <div class="overPic"></div>
-	        	<div class="container intra">
+	        	<div class="intra">
 	        		<div class="row">
-	        			<div data-wow-delay="0.8s" class="u-full-width column wow fadeInDown">
+	        			<div data-wow-delay="0.8s" class="large-12 columns wow fadeInDown">
 		        			<h3>Intranet</h3>
 		        			<p>Ingresar al intranet de HanoPaniagua.</p>
 	        			</div>
-	        			<div data-wow-delay="1.0s" class="offset-by-three six columns wow fadeInLeft">
+	        			<div data-wow-delay="1.0s" class="large-6 large-offset-3 columns end wow fadeInLeft">
 		        			<div class="intraButton">
 			        			<a href="http://aipa.hpa.mx/man_cliente/" target="_blank">Ingresar al Intranet</a>
 		        			</div>
 		        		</div>
-	        		</div>
-	        		<div class="row">
-	        			<div data-wow-delay="1.6s" class="offset-by-four four columns wow fadeInRight">
+		        		<div data-wow-delay="1.6s" class="large-6 large-offset-3 columns end wow fadeInRight">
 		        			<div class="consultlaEm">
 			        			<p>Si aun no cuentas con tus datos de acceso, manda un mail a info@hpa.com.mx</p>
 		        			</div>
@@ -611,9 +633,9 @@
         </main><!--endMain-->
         
         <footer role="contentinfo">
-	        <div class="container">
+	        <div class="">
 		        <div class="row">
-			        <div class="u-full-width column">
+			        <div class="large-12 column">
 				        <p>HPA: Dolores Hidalgo #49 Col. 16 Septiembre, C.P. 28239, Manzanillo, Colima. Tel: (314) 332-0014. E-mail: info@hpa.com.mx</p>
 			        </div>
 		        </div>
@@ -624,6 +646,8 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/vendor/jquery.easing.1.3.js"></script>
         <script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+        <script src="js/vendor/foundation.min.js"></script>
+        <script src="js/vendor/what-input.js"></script>
         <script src="js/additional-methods.min.js"></script>
         <script src="js/jquery.bxslider.min.js"></script>
         <script src="js/wow.min.js"></script>
