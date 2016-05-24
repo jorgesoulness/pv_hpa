@@ -37,7 +37,14 @@ $(window).load(function() {
 });
 
 $(document).ready(function() {
-	$('.fancybox').fancybox();
+	$('.fancybox').fancybox({
+		padding: 10,
+		  helpers: {
+		    overlay: {
+		      locked: false
+		    }
+		  }
+	});
 	
 	$('#cotiza').validate({
           rules: {

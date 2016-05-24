@@ -1,4 +1,4 @@
-//$(document).foundation();
+$(document).foundation();
 
 (function($){
     //Plugin activation
@@ -24,7 +24,7 @@ function MenuEffex() {
 }
 
 jQuery(document).ready(function($) {
-	$('ul.mobile-navigation li a[href^="#"], nav.menu ul li a, a.cotizaBtn').on('click',function (e) {
+	$('ul.mobile-navigation li a[href^="#"], nav.menuContent ul li a, a.cotizaBtn').on('click',function (e) {
 	    e.preventDefault();
 
 	    var target = this.hash;
@@ -39,8 +39,8 @@ jQuery(document).ready(function($) {
 	
 	//Slider
 	$('.bxslider').bxSlider({
-		auto: false,
-		easing: 'easeInElastic'
+		auto: true,
+		adaptiveHeight: true
 	});
 	
     //Menu
